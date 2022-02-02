@@ -40,4 +40,10 @@ class Keyur_Calculator_Model {
         
         return result
     }
+    
+    func reset() {
+        firstNumber = nil
+        secondNumber = nil
+        operation = nil
+    }
 }

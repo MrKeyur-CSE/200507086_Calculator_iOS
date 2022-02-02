@@ -37,31 +37,45 @@ class ViewController: UIViewController {
         var currentValue = numberDisplay.text!
         
         switch (buttonText!) {
-        case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9":
+        case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".":
             print(buttonText!)
             if(startNewNumber) {
-                currentValue = buttonText!
-            }else{
-                currentValue = currentValue + buttonText!
+                
+                if (buttonText == "."){
+                    currentValue = "0. "
+                } else {
+                    currentValue = buttonText!
+                }
+            } else {
+                if (buttonText == ".") {
+                    if (currentValue.contains(".")) {
+                        //do nothing
+                    } else {
+                        currentValue = currentValue + buttonText!
+                    }
+                } else {
+                    currentValue = currentValue + buttonText!
+                }
+                
             }
             
             startNewNumber = false
             calcultorModel.updateNumber(newNumber: Double(currentValue)!)
             //do something
             
-        case "+":
+        case "+", "-", "*", "/":
+            if (calcultorModel.secondNumber != nil) {
+                
+                currentValue = String(calcultorModel.getResult())
+                
+                calcultorModel.reset()
+                
+                calcultorModel.updateNumber(newNumber: Double(currentValue)!)
+                
+            }
             calcultorModel.operation = buttonText
             startNewNumber = true
             //accept second number after this
-        case "-":
-            calcultorModel.operation = buttonText
-            startNewNumber = true
-        case "*":
-            calcultorModel.operation = buttonText
-            startNewNumber = true
-        case "/":
-            calcultorModel.operation = buttonText
-            startNewNumber = true
                 
         case "=":
             if (calcultorModel.secondNumber == nil) {
@@ -70,6 +84,11 @@ class ViewController: UIViewController {
             currentValue = String(calcultorModel.getResult())
             startNewNumber = true
             // get result and display result it on display panel
+            
+        case "AC":
+            currentValue = "0"
+            calcultorModel.reset()
+            startNewNumber = true
             
         default:
             print(buttonText!)
