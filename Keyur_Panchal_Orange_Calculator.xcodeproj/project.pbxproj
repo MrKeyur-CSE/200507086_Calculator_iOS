@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172EEEA227A9099300BBC577 /* Keyur_Calculator_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172EEEA127A9099300BBC577 /* Keyur_Calculator_Model.swift */; };
 		1746099527A7C3B50042FBC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746099427A7C3B50042FBC7 /* AppDelegate.swift */; };
 		1746099727A7C3B50042FBC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746099627A7C3B50042FBC7 /* SceneDelegate.swift */; };
 		1746099927A7C3B50042FBC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746099827A7C3B50042FBC7 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		172EEEA127A9099300BBC577 /* Keyur_Calculator_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyur_Calculator_Model.swift; sourceTree = "<group>"; };
 		1746099127A7C3B50042FBC7 /* Keyur_Panchal_Orange_Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keyur_Panchal_Orange_Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1746099427A7C3B50042FBC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1746099627A7C3B50042FBC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				1746099D27A7C3B60042FBC7 /* Assets.xcassets */,
 				1746099F27A7C3B60042FBC7 /* LaunchScreen.storyboard */,
 				174609A227A7C3B60042FBC7 /* Info.plist */,
+				172EEEA127A9099300BBC577 /* Keyur_Calculator_Model.swift */,
 			);
 			path = Keyur_Panchal_Orange_Calculator;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172EEEA227A9099300BBC577 /* Keyur_Calculator_Model.swift in Sources */,
 				1746099927A7C3B50042FBC7 /* ViewController.swift in Sources */,
 				1746099527A7C3B50042FBC7 /* AppDelegate.swift in Sources */,
 				1746099727A7C3B50042FBC7 /* SceneDelegate.swift in Sources */,
